@@ -1,0 +1,43 @@
+{
+  "name": "mj_react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "mj-script build",
+    "dev": "mj-script dev",
+    "build:pre": "mj-script build:pre",
+    "analyz": "mj-script analyz",
+    "lint": "eslint --ext .jsx,.js --fix src/",
+    "test": "jest"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "author": "zhanan",
+  "license": "ISC",
+  "dependencies": {
+    "@loadable/component": "^5.12.0",
+    "antd": "^4.0.0",
+    "axios": "^0.19.2",
+    "mj-script": "^1.0.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-redux": "^7.2.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.5",
+    "redux-actions": "^2.6.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0",
+    "node-sass": "^4.13.1",
+    "pre-commit": "^1.2.2",
+    "react-hot-loader": "^4.12.19",
+    "sass-loader": "^8.0.2"
+  }
+}
