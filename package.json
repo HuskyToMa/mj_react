@@ -32,8 +32,8 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
+    "file-loader": "^5.1.0",
     "mj-script": "^1.0.3",
-    "pre-commit": "^1.2.2",
-    "react-hot-loader": "^4.12.19"
+    "pre-commit": "^1.2.2"
   }
 }
