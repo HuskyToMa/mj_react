@@ -31,14 +31,6 @@ module.exports = {
 			{
 				decoratorsBeforeExport: true
 			}
-		],
-		[
-			"import",
-			{
-				"libraryName": "antd",
-      			"libraryDirectory": "es",
- 				"style": true
-			}
 		]
 	]
 }
