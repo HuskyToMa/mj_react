@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button } from 'antd';
 import { connect } from 'react-redux';
-import Styles from './index.module.less';
 
 const Test = (props) => {
   const t = () => {
@@ -9,7 +8,7 @@ const Test = (props) => {
   };
 
   return (
-    <div className={Styles.ss}>
+    <div>
       我是另一个组件
       <Button type="primary" onClick={t}>测试111</Button>
     </div>

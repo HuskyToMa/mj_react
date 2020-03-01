@@ -9,7 +9,6 @@ import {
   Button,
   Icon,
 } from 'antd';
-import './index.scss';
 
 const mapDispatchToProps = (dispatch) => ({
   login: (config, success, fail) => dispatch(login(config, success, fail)),

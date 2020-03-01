@@ -1,7 +1,6 @@
 import React from 'react';
-// import { Button } from 'antd';
+import { Button } from 'antd';
 import { connect } from 'react-redux';
-import Styles from './index.module.scss';
 
 const Test = (props) => {
   const t = () => {
@@ -9,10 +8,10 @@ const Test = (props) => {
   };
 
   return (
-    <div className={Styles.ss}>
+    <dispatchEvent>
       我是一个组件
-      {/* <Button type="primary" onClick={t}>测试111</Button> */}
-    </div>
+      <Button type="primary" onClick={t}>测试111</Button>
+    </dispatchEvent>
   );
 };
 
