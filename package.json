@@ -33,11 +33,7 @@
   },
   "devDependencies": {
     "mj-script": "^1.0.2",
-    "less": "^3.11.1",
-    "less-loader": "^5.0.0",
-    "node-sass": "^4.13.1",
     "pre-commit": "^1.2.2",
-    "react-hot-loader": "^4.12.19",
-    "sass-loader": "^8.0.2"
+    "react-hot-loader": "^4.12.19"
   }
 }
