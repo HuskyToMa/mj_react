@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "file-loader": "^5.1.0",
-    "mj-script": "^1.0.3",
+    "mj-script": "^1.0.4",
     "pre-commit": "^1.2.2"
   }
 }
