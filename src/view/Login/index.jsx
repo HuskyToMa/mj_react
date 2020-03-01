@@ -7,72 +7,76 @@ import {
   Input,
   Checkbox,
   Button,
-  Icon,
 } from 'antd';
+import './index.scss';
 
 const mapDispatchToProps = (dispatch) => ({
   login: (config, success, fail) => dispatch(login(config, success, fail)),
 });
 
+const layout = {
+  labelCol: { span: 8 },
+  wrapperCol: { span: 16 },
+};
+const tailLayout = {
+  wrapperCol: { offset: 8, span: 16 },
+};
+
 const Login = (props) => {
   const history = useHistory();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    props.form.validateFields((err, values) => {
-      if (!err) {
-        props.login(
-          // 可发送一个promise的http请求
-          new Promise((resolve) => {
-            resolve({ a: 111 });
-          }),
-          () => {
-            console.log('登录成功', values);
-            sessionStorage.setItem('token', '测试的token');
-            history.push('/test');
-          },
-        );
-      }
-    });
+  const onFinish = (values) => {
+    props.login(
+      // 可发送一个promise的http请求
+      new Promise((resolve) => {
+        resolve({ a: 111 });
+      }),
+      () => {
+        console.log('登录成功', values);
+        sessionStorage.setItem('token', '测试的token');
+        history.push('/test');
+      },
+    );
   };
-  const { form } = props;
-  const { getFieldDecorator } = form;
+
+  const onFinishFailed = (errorInfo) => {
+    console.log('Failed:', errorInfo);
+  };
 
   return (
-    <div className="components-form-demo-normal-login">
-      <Form onSubmit={handleSubmit} className="login-form">
-        <Form.Item>
-          {getFieldDecorator('username', {
-            rules: [{ required: true, message: 'Please input your username!' }],
-          })(
-            <Input
-              prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-              placeholder="Username"
-            />,
-          )}
-        </Form.Item>
-        <Form.Item>
-          {getFieldDecorator('password', {
-            rules: [{ required: true, message: 'Please input your Password!' }],
-          })(
-            <Input
-              prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
-              type="password"
-              placeholder="Password"
-            />,
-          )}
-        </Form.Item>
-        <Form.Item>
-          {getFieldDecorator('remember', {
-            valuePropName: 'checked',
-            initialValue: true,
-          })(<Checkbox>记住账号</Checkbox>)}
-          <Button type="primary" htmlType="submit" className="login-form-button">
-            登录
-          </Button>
-        </Form.Item>
-      </Form>
-    </div>
+    <Form
+      {...layout}
+      name="basic"
+      initialValues={{ remember: true }}
+      onFinish={onFinish}
+      onFinishFailed={onFinishFailed}
+    >
+      <Form.Item
+        label="Username"
+        name="username"
+        rules={[{ required: true, message: 'Please input your username!' }]}
+      >
+        <Input />
+      </Form.Item>
+
+      <Form.Item
+        label="Password"
+        name="password"
+        rules={[{ required: true, message: 'Please input your password!' }]}
+      >
+        <Input.Password />
+      </Form.Item>
+
+      <Form.Item {...tailLayout} name="remember" valuePropName="checked">
+        <Checkbox>Remember me</Checkbox>
+      </Form.Item>
+
+      <Form.Item {...tailLayout}>
+        <Button type="primary" htmlType="submit">
+          Submit
+        </Button>
+      </Form.Item>
+    </Form>
   );
 };
 
@@ -80,4 +84,4 @@ const Login = (props) => {
 export default connect(
   null,
   mapDispatchToProps,
-)(Form.create({ name: 'normal_login' })(Login));
+)(Login);
