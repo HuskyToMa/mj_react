@@ -10,7 +10,7 @@
     "analyz": "mj-script analyz",
     "lint": "eslint --ext .jsx,.js --fix src/",
     "test": "jest --passWithNoTests",
-    "add": "node ../index.js add"
+    "add": "mj-script add"
   },
   "pre-commit": [
     "lint",
