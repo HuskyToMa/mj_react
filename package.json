@@ -9,7 +9,7 @@
     "build:pre": "mj-script build:pre",
     "analyz": "mj-script analyz",
     "lint": "eslint --ext .jsx,.js --fix src/",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "add": "node ../index.js add"
   },
   "pre-commit": [
