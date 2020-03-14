@@ -39,6 +39,7 @@ module.exports = {
       			"libraryDirectory": "es",
  				"style": true
 			}
-		]
+		],
+		"react-hot-loader/babel"
 	]
 }

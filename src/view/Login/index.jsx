@@ -10,6 +10,7 @@ import {
 } from 'antd';
 import './index.scss';
 
+
 const mapDispatchToProps = (dispatch) => ({
   login: (config, success, fail) => dispatch(login(config, success, fail)),
 });
@@ -24,7 +25,6 @@ const tailLayout = {
 
 const Login = (props) => {
   const history = useHistory();
-
   const onFinish = (values) => {
     props.login(
       // 可发送一个promise的http请求

@@ -7,7 +7,6 @@ import RouterConfig from './router';
 import configureStore from './redux/store';
 
 const store = configureStore();
-
 const App = () => (
   <Provider store={store}>
     <Router>
@@ -16,7 +15,7 @@ const App = () => (
             const CurrentRouter = RouterConfig[name];
             return <CurrentRouter key={name} />;
           })
-        }
+      }
     </Router>
   </Provider>
 );
