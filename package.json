@@ -10,7 +10,8 @@
     "analyz": "mj-script analyz",
     "lint": "eslint --ext .jsx,.js --fix src/",
     "test": "jest --passWithNoTests",
-    "add": "mj-script add"
+    "add": "mj-script add",
+    "deploy": "mj-script deploy"
   },
   "pre-commit": [
     "lint",
