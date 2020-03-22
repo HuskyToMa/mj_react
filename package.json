@@ -10,7 +10,8 @@
     "analyz": "mj-script analyz",
     "lint": "eslint --ext .jsx,.js --fix src/",
     "test": "jest --passWithNoTests",
-    "add": "mj-script add"
+    "add": "mj-script add",
+    "deploy": "mj-script deploy"
   },
   "pre-commit": [
     "lint",
@@ -36,7 +37,7 @@
   },
   "devDependencies": {
     "file-loader": "^5.1.0",
-    "mj-script": "^1.0.6",
+    "mj-script": "^1.1.0",
     "pre-commit": "^1.2.2"
   }
 }
