@@ -34,3 +34,19 @@ antd.theme.js：antd的样式设置
 devConfig.js：开发环境的webpack配置
 preConfig.js：预生产环境的webpack配置
 proConfig.js：生产环境的webpack配置
+
+## deploy
+
+一键自动化部署，可以直接部署至对应的服务器中，但是需要在服务器中安装depolyer这个node服务，同时配置`config/deploy.js`文件中的服务器ip地址以及port
+
+[deployer](https://github.com/HuskyToMa/depolyer) git地址
+
+```javascript
+
+{
+    host: 'localhost',  // ip地址
+    port: '8000',       // 端口
+    url: '/depoly'      // 发送出来的构建接口，可修改，默认的deployer使用的是这个参数
+}
+
+```
