@@ -11,7 +11,8 @@
     "lint": "eslint --ext .jsx,.js --fix src/",
     "test": "jest --passWithNoTests",
     "add": "mj-script add",
-    "deploy": "mj-script deploy"
+    "deploy": "mj-script deploy",
+    "build:lib": "mj-script build:lib"
   },
   "pre-commit": [
     "lint",
@@ -36,7 +37,6 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "file-loader": "^5.1.0",
     "mj-script": "^1.1.0",
     "pre-commit": "^1.2.2"
   }
